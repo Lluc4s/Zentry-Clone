@@ -40,7 +40,7 @@
   --color-blue-200: oklch(0.07 0 0);
   --color-blue-300: oklch(0.73 0.1096 225.45);
 
-  --color-violet-primary: oklch(0.51 0.2841 279.7);
+  --color-violet-300: oklch(0.51 0.2841 279.7);
 
   --color-yellow-100: oklch(0.65 0.114 114.98);
   --color-yellow-300: oklch(0.96 0.1753 115.45);
@@ -51,4 +51,27 @@ body {
   width: 100dvw;
   background-color: #dfdff0;
   overflow-x: hidden;
+}
+
+@layer components {
+  .absolute-center {
+    @apply absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%];
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .mask-clip-path {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .special-font b {
+    font-family: var(--font-zentry);
+    font-feature-settings: "ss01" on;
+  }
+
+  .hero-heading {
+    @apply uppercase font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem];
+  }
 }
